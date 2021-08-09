@@ -37,7 +37,7 @@ export const postsReducer = (state = initialState, action) => {
     case POST_ADD_SUCCESS:
       return {
         ...state,
-        posts: [...state.posts, action.payload],
+        posts: [ action.payload,...state.posts],
         loading: false,
       };
     case POST_ADD_FAIL:
